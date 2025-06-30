@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WillTech - Assistência Técnica em Itaquera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        dark: '#0F172A',
+                        light: '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        img {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+        }
+        
+        .hero-bg {
+            background: url('banner.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.8);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        
+        .testimonial-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-dark text-light font-sans">
+    <!-- Header/Navbar -->
+    <header class="bg-dark/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-laptop-code text-primary text-2xl mr-2"></i>
+                <span class="text-xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">WillTech</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-light hover:text-primary transition">Início</a>
+                <a href="#sobre" class="text-light hover:text-primary transition">Sobre</a>
+                <a href="#servicos" class="text-light hover:text-primary transition">Serviços</a>
+                <a href="#depoimentos" class="text-light hover:text-primary transition">Depoimentos</a>
+                <a href="#contato" class="text-light hover:text-primary transition">Contato</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-light hover:text-primary">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-lg w-full py-4 px-4 border-t border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="#inicio" class="text-light hover:text-primary transition">Início</a>
+                <a href="#sobre" class="text-light hover:text-primary transition">Sobre</a>
+                <a href="#servicos" class="text-light hover:text-primary transition">Serviços</a>
+                <a href="#depoimentos" class="text-light hover:text-primary transition">Depoimentos</a>
+                <a href="#contato" class="text-light hover:text-primary transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="hero-content container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="text-light">Tecnologia com</span>
+                    <span class="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent"> confiança</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">
+                    Soluções técnicas especializadas para computadores e eletrônicos em Itaquera. Atendimento rápido, honesto e com garantia.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/5511952197950?text=Olá%20Willian,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank"
+                       class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Solicitar Orçamento
+                    </a>
+                    <a href="#servicos" class="border border-primary text-primary hover:bg-primary/10 font-bold py-3 px-6 rounded-lg transition">
+                        Nossos Serviços
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">
+                        <span class="text-light">Sobre a</span>
+                        <span class="text-primary"> WillTech</span>
+                    </h2>
+                    <p class="text-gray-300 mb-4">
+                        A WillTech nasceu da paixão por tecnologia e eletrônica. O que começou como um hobby de infância, consertando e desmontando aparelhos, transformou-se em um negócio sério e comprometido com a qualidade.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Nosso técnico principal, Willian, tem experiência no mercado, atendendo com honestidade e transparência. Acreditamos que a tecnologia deve ser acessível e que um bom serviço técnico não precisa ser complicado ou caro.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-dark/50 rounded-lg px-4 py-2">
+                            <i class="fas fa-medal text-primary mr-2"></i>
+                            <span>Qualidade Garantida</span>
+                        </div>
+                        <div class="flex items-center bg-dark/50 rounded-lg px-4 py-2">
+                            <i class="fas fa-hand-holding-usd text-primary mr-2"></i>
+                            <span>Preço Justo</span>
+                        </div>
+                        <div class="flex items-center bg-dark/50 rounded-lg px-4 py-2">
+                            <i class="fas fa-clock text-primary mr-2"></i>
+                            <span>Atendimento Rápido</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gradient-to-br from-primary/20 to-dark/80 rounded-xl p-1">
+                        <img src="about-image.avif" 
+                             alt="Técnico trabalhando" class="rounded-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="text-light">Nossos</span>
+                    <span class="text-primary"> Serviços</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Oferecemos soluções completas para manutenção e reparo de computadores e eletrônicos. Confira nossos principais serviços:
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-desktop text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Manutenção de Computadores</h3>
+                    <p class="text-gray-400 mb-4">
+                        Formatação, limpeza interna, reparos em hardware e upgrades para deixar seu PC como novo.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Formatação com backup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Limpeza completa</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Troca de pasta térmica</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-microchip text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Upgrades de Hardware</h3>
+                    <p class="text-gray-400 mb-4">
+                        Instalação profissional de SSD, memória RAM, placa de vídeo e outros componentes.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> SSD para mais velocidade</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Mais memória RAM</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Placas de vídeo</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-gamepad text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Reparo de Acessórios Gamers</h3>
+                    <p class="text-gray-400 mb-4">
+                        Conserto de controles, teclados mecânicos, mouses e outros periféricos gamers.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Troca de componentes</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Limpeza especializada</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Manutenção preventiva</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Diagnóstico Técnico</h3>
+                    <p class="text-gray-400 mb-4">
+                        Identificamos o problema do seu equipamento com precisão e rapidez.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Análise completa</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Relatório detalhado</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Orçamento sem compromisso</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Orçamentos</h3>
+                    <p class="text-gray-400 mb-4">
+                        Avaliação completa do seu computador com orçamento detalhado para upgrades e reparos.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Análise de componentes</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Sugestão de upgrades</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Orçamento sem compromisso</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-900 rounded-xl p-6 transition duration-300 hover:border-primary border border-gray-800">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Reparo de Eletrônicos</h3>
+                    <p class="text-gray-400 mb-4">
+                        Conserto de diversos aparelhos eletrônicos com peças de qualidade.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Troca de telas</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Problemas de carregamento</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Reparo em placas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="text-light">O que dizem</span>
+                    <span class="text-primary"> nossos clientes</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    A satisfação dos nossos clientes é nossa maior recompensa. Veja alguns depoimentos:
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-xl p-6 border border-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Levei meu notebook para formatação e limpeza na WillTech e ficou perfeito! Atendimento rápido, preço justo e ainda me explicaram tudo que foi feito. Recomendo demais!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-xl p-6 border border-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Paula</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Meu computador estava muito lento e o William colocou um SSD e mais memória RAM. A diferença foi absurda! Agora roda tudo rápido e sem travar. Excelente profissional!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-xl p-6 border border-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto Gomes</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Consertei meu controle de PS4 na WillTech quando ninguém mais quis pegar. Ficou perfeito e ainda saiu mais barato do que eu esperava. Virei cliente fixo!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">
+                        <span class="text-light">Entre em</span>
+                        <span class="text-primary"> contato</span>
+                    </h2>
+                    <p class="text-gray-400 mb-8">
+                        Estamos prontos para ajudar com qualquer problema técnico. Entre em contato pelo WhatsApp ou venha nos visitar em Itaquera.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Localização</h4>
+                                <p class="text-gray-400">Itaquera, São Paulo - SP</p>
+                                <p class="text-gray-400 text-sm">Endereço completo via WhatsApp</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Horário de Atendimento</h4>
+                                <p class="text-gray-400">Segunda a Sexta: 09h às 18h</p>
+                                <p class="text-gray-400">Sábado: 09h às 13h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fab fa-whatsapp text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">WhatsApp</h4>
+                                <p class="text-gray-400">(11) 95219-7950</p>
+                                <a href="https://wa.me/5511952197950?text=Olá%20Willian,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank"
+                                   class="text-primary hover:underline">Enviar mensagem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Como nos encontrar</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-primary/10 p-4 rounded-full mb-3">
+                                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">Telefone/WhatsApp</h4>
+                                <p class="text-gray-400">(11) 95219-7950</p>
+                                <a href="https://api.whatsapp.com/send/?phone=5511952197950&text=Ol%C3%A1+Willian%2C+gostaria+de+solicitar+um+or%C3%A7amento&type=phone_number&app_absent=0" 
+                                   class="mt-2 bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition inline-flex items-center">
+                                    <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp
+                                </a>
+                            </div>
+                            
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-primary/10 p-4 rounded-full mb-3">
+                                    <i class="fas fa-envelope text-primary text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">E-mail</h4>
+                                <p class="text-gray-400">contato@willtech.com</p>
+                            </div>
+                            
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-primary/10 p-4 rounded-full mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">Localização</h4>
+                                <p class="text-gray-400">Itaquera, São Paulo - SP</p>
+                                <p class="text-gray-400 text-sm mt-1">Endereço completo via WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511952197950?text=Olá%20Willian,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-laptop-code text-primary text-2xl mr-2"></i>
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">WillTech</span>
+                </div>
+                <!--
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                -->
+                <div class="text-gray-500 text-sm">
+                    &copy; 2025 WillTech - Todos os direitos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
